@@ -3,7 +3,7 @@ const sub_question_list = {
     rika_ima:[],
     rika_shuri:[],
     rika_oti:[],
-    reikisi:[],
+    rekisi:[],
     komin:[],
     kobun:[]
 }
