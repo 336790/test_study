@@ -6,6 +6,16 @@
         <link href="style.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <body>
+        <select name="subjects" id="subjects">
+            <option id="">--教科選べ--</option>
+            <option id="rika_ue">理科1(上原)</option>
+            <option id="rika_ima">理科1(今川)</option>
+            <option id="rika_shuri">理科2(朱里)</option>
+            <option id="rika_oti">理科2(落合)</option>
+            <option id="rekishi">歴史</option>
+            <option id="komin">公民</option>
+            <option id="kobun">古文</option>
+        </select>
         <div class="questions">
             <span id="question" class="question">問題</span>
             <br><br>
@@ -16,6 +26,7 @@
             間違えた問題 : <br><br>
         </span>
 
-        <script src="matsui.js"></script>
+        <script src="./imports.js"></script>
+        <script src="./matsui.js"></script>
     </body>
 </html>

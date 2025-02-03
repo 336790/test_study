@@ -1,20 +1,27 @@
 let question_element = document.getElementById("question")
 let answer_element = document.getElementById("answer")
 let uncorrect_questoins_element = document.getElementById("kaitou")
+let subject_option = document.getElementById("subjects")
+let options = document.querySelectorAll("#subjects option");
 answer_element.addEventListener("change",changeFunc);
+subject_option.addEventListener("change" , () => {
+    index = subject_option.selectedIndex
+    if (subject_option.selectedIndex==0){return};
+    question_list = sub_question_list[options[index].id]
+    console.log(question_list,options[index].id)
+    not_question_num = [...Array(question_list.length/2).keys()].map((d) => {return d})
+    random_question();
+});
+
 const maru = new Audio('maru.mp3')
 const batsu = new Audio('batsu.mp3')
 
-let q_number;
-let question_list =["松井の下の名前","ナイス",
-"15世紀から16世紀にかけて起こった神聖ローマ帝国とフランスの間の戦争は?","イタリア戦争",
-"イタリア戦争は神聖ローマ帝国とどこの戦争か","フランス",
-"フランソワ1世は、神聖ローマ帝国を倒すためどこの国と同盟を結んだか","オスマン帝国"
-]
-let not_question_num = [...Array(question_list.length/2).keys()].map((d) => {return d})
-console.log(not_question_num)
 
-random_question()
+let q_number;
+let question_list;
+let not_question_num;
+let index;
+
 
 function changeFunc(e){
     ans = e.target.value
