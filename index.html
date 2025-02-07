@@ -2,11 +2,11 @@
 
 <html>
     <head>
-        <title>前期末考査の勉強</title>
-        <link href="style.css" rel="stylesheet" type="text/css" media="all">
+        <title>テス勉</title>
+        <link href="./style.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <body>
-        <select name="subjects" id="subjects">
+        <select name="subjects" id="subjects" class="subjects">
             <option id="">--教科選べ--</option>
             <option id="rika_ue">理科1(上原)</option>
             <option id="rika_ima">理科1(今川)</option>
@@ -16,14 +16,23 @@
             <option id="komin">公民</option>
             <option id="kobun">古文</option>
         </select>
-        <div class="questions">
+
+        <div class="questions" id="questions">
+            <h1>残り時間</h1><h1 id="time_limit"></h1>
             <span id="question" class="question">問題</span>
             <br><br>
             <input type="text" class="answer" id="answer">
             <br><br>
         </div>
+
+        <select class="time_change" id="time_change">
+            <option id="5">5秒(難)</option>
+            <option id="8" selected>8秒(標準)</option>
+            <option id="100">100秒(簡)</option>
+        </select>
+
         <span id="kaitou" class="">
-            間違えた問題 : <br><br>
+            <p>間違えた問題 : </p>
         </span>
 
         <script src="./imports.js"></script>
