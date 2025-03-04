@@ -49,10 +49,10 @@ function Counter() {
 }
 let n;
 Counter.prototype.start = () =>{n = setInterval(() =>{
-    if (Counter.value==0) {
+    if (counter.value==0) {
         ;
     }else{
-        time_limit.textContent = `${Counter.value-1}秒`;
+        time_limit.textContent = `${counter.value-1}秒`;
         console.log("titin")
         counter.value-=1;
     };
