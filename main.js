@@ -28,6 +28,7 @@ time_chage.addEventListener("change" , () =>{
 
 subjects.addEventListener("change" , () =>{
     index = subjects.selectedIndex
+    counter.finish()
     while (not_right.firstChild){not_right.removeChild(not_right.firstChild)};
     if (subjects.selectedIndex==0){
         qs_state = false
