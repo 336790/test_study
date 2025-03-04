@@ -105,7 +105,11 @@ function q_time_out(q_num){
         batsu.pause()
         batsu.currentTime = 0
         batsu.play()
-        not_right.innerHTML += "<br><br>" + question_list[qnum*2] + " : " + question_list[qnum*2+1] 
+        answer_element.value=""
+        const p = document.createElement("p");
+        p.innerText = String(question_list[qnum*2] + " : " + question_list[qnum*2+1] )
+        p.classList.add("add")
+        not_right.prepend(p)
         random_question()
     }
 }
