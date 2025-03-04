@@ -74,6 +74,8 @@ function changeFunc(e){
         answer_element.value = ""
         counter.finish()
         random_question()
+    }else if(ans == "しね"){
+        q_time_out(q_number)
     }else{
         batsu.play()
     }
