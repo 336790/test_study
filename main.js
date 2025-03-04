@@ -20,7 +20,7 @@ let question_list;
 let not_question_num;
 let index;
 let qs_state = false
-let time_limit_num = 5000
+let time_limit_num = 15000
 
 time_chage.addEventListener("change" , () =>{
     time_limit_num=Number(time_options[time_chage.selectedIndex].id)*1000
@@ -57,7 +57,7 @@ Counter.prototype.start = () =>{n = setInterval(() =>{
         counter.value-=1;
     };
 } , 1000)}
-Counter.prototype.finish = () =>{clearInterval(n)}
+Counter.prototype.finish = () =>{clearInterval(n);console.log("clear")}
 const counter = new Counter()
 
 function changeFunc(e){
@@ -67,10 +67,12 @@ function changeFunc(e){
     maru.currentTime = 0
     batsu.pause()
     batsu.currentTime = 0
+    answer_element.value=""
 
     if(question_list[q_number*2+1] == ans){
         maru.play()
         answer_element.value = ""
+        counter.finish()
         random_question()
     }else{
         batsu.play()
