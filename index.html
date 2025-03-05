@@ -10,27 +10,31 @@
         <select name="subjects" id="subjects" class="subjects">
             <option id="">--教科選べ--</option>
             <option id="rika_ue">理科1(上原)</option>
-            <option id="rika_ima">理科1(今川)</option>
             <option id="rika_shuri">理科2(朱里)</option>
             <option id="rika_oti">理科2(落合)</option>
-            <option id="rekishi">歴史</option>
+            <option id="nihonshi">日本史一問一答</option>
+            <option id="sekaishi">世界史</option>
             <option id="komin">公民</option>
             <option id="kobun">古文</option>
         </select>
-
-        <div class="questions" id="questions">
-            <h1>残り時間</h1><h1 id="time_limit"></h1>
-            <span id="question" class="question">問題</span>
-            <br><br>
-            <input type="text" class="answer" id="answer">
-            <br><br>
-        </div>
-
+        <input type="checkbox" id="q_type"/>
+        <label for="scales">ランダム出題</label>
+        <h3>※複数の正解がある場合は「、」で区切ってね(,はだめ)</h3>
+        <p></p>
         <select class="time_change" id="time_change">
             <option id="8">8秒(難)</option>
             <option id="15" selected>15秒(標準)</option>
             <option id="60">60秒(簡)</option>
         </select>
+
+        <div class="questions" id="questions">
+            <h1 id="q_number"></h1>
+            <h2>残り時間</h2><h2 id="time_limit"></h2>
+            <span id="question" class="question">問題</span>
+            <br><br>
+            <input type="text" class="answer" id="answer">
+            <br><br>
+        </div>
 
         <h2>間違えた問題</h2>
         <span id="kaitou" class="">
