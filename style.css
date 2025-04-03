@@ -8,8 +8,24 @@
     text-align: center;
 }
 
+.question_border{
+    margin: 0 auto;
+    padding: 0px 20px 20px;
+    width: 95vw;
+    height: auto;
+    border: 5px double black;
+}
+
 .question {
     font-size: 150%;
+}
+
+.timer {
+    width: 200px;
+    padding: 0px 10px 0px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 2px solid black;
 }
 
 .subjects {
